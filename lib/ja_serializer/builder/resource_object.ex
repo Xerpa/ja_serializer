@@ -22,7 +22,11 @@ defmodule JaSerializer.Builder.ResourceObject do
       data:          context.data,
       attributes:    Attribute.build(context),
       relationships: Relationship.build(context),
+<<<<<<< HEAD
       links:         Link.build(context),
+=======
+      links:         Enum.map(serializer.__links, fn {type, uri} -> Link.build(context, type, uri) end),
+>>>>>>> add support for custom links
       meta:          serializer.meta(context.data, context.conn)
     }
   end
