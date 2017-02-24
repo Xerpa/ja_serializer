@@ -198,10 +198,8 @@ defmodule JaSerializer.Serializer do
   defmacro __using__(_) do
     quote do
       @behaviour JaSerializer.Serializer
-<<<<<<< HEAD
       alias JaSerializer.Relationship.HasMany
       alias JaSerializer.Relationship.HasOne
-=======
       @links      []
       @attributes []
       @relations  []
@@ -210,7 +208,6 @@ defmodule JaSerializer.Serializer do
         serialize: 2, attributes: 1, location: 1, links: 1,
         has_many: 2, has_one: 2, has_many: 1, has_one: 1
       ]
->>>>>>> add support for custom links
 
       # Default Behaviour Callback Defintions
       unquote(define_default_id())
