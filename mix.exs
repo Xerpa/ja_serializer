@@ -20,6 +20,7 @@ defmodule JaSerializer.Mixfile do
   end
 
   defp deps do
+<<<<<<< HEAD
     [
       {:inflex, "~> 1.4"},
       {:plug, "> 1.0.0"},
@@ -33,6 +34,16 @@ defmodule JaSerializer.Mixfile do
       {:dialyxir, "~> 0.3.5", only: :dev},
       {:credo, "~> 0.4.11", only: :dev},
     ]
+=======
+    [{:inflex, "~> 1.8"},
+     {:plug, "~> 1.4"},
+     {:ecto, "~> 2.0"},
+     {:poison, "~> 1.4 or ~> 3.0"},
+     {:earmark, "~> 1.0", only: :dev},
+     {:inch_ex, "~> 0.5", only: :docs},
+     {:scrivener, "~> 2.0", optional: true},
+     {:ex_doc, "~> 0.16", only: :dev}]
+>>>>>>> Update dependencies
   end
 
   defp package do

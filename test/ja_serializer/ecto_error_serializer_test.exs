@@ -36,7 +36,7 @@ defmodule JaSerializer.EctoErrorSerializerTest do
       Ecto.Changeset.add_error(
         %Ecto.Changeset{},
         :monies,
-        "must be more than %{count}",
+        "must be more then %{count}",
         [count: 10]
       )
     )
