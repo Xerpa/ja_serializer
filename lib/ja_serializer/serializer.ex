@@ -258,9 +258,8 @@ defmodule JaSerializer.Serializer do
 
   defp define_default_links do
     quote do
+      def links(_struct, _conn), do: %{}
       defoverridable [links: 2]
-      unquote(block)
-      def type, do: unquote(type)
     end
   end
 
