@@ -258,10 +258,7 @@ defmodule JaSerializer.Serializer do
 
   defp define_default_links do
     quote do
-<<<<<<< HEAD
-      def links(_struct, _conn), do: %{}
       defoverridable [links: 2]
-=======
       unquote(block)
       def type, do: unquote(type)
     end
@@ -317,7 +314,6 @@ defmodule JaSerializer.Serializer do
   defmacro links(links) do
     quote bind_quoted: [links: links] do
       @links (links ++ @links)
->>>>>>> add support for custom links
     end
   end
 
@@ -344,13 +340,10 @@ defmodule JaSerializer.Serializer do
 
   defp define_api do
     quote do
-<<<<<<< HEAD
-=======
       def __links,      do: @links
       def __relations,  do: @relations
       def __attributes, do: @attributes
 
->>>>>>> add support for custom links
       def format(data) do
         format(data, %{})
       end
